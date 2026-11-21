@@ -145,13 +145,6 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
-# Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot-service.qti \
-    android.hardware.boot-service.qti.recovery
-
-$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:32 \
@@ -218,10 +211,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libcrypto_shim.vendor
-
-# fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -397,15 +386,6 @@ PRODUCT_PACKAGES += \
 
 # Treble
 PRODUCT_USE_VNDK_OVERRIDE := true
-
-# Update engine
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # USB
 PRODUCT_PACKAGES += \
