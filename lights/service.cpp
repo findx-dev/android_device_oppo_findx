@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "android.hardware.light-service.akershus"
+#define LOG_TAG "android.hardware.light-service.findx"
 
 #include <android/binder_manager.h>
 #include <android/binder_process.h>

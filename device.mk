@@ -142,7 +142,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2248
+TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # Boot control
@@ -210,7 +210,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    ZTEDoze
+    OPlusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -284,7 +284,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.akershus
+    android.hardware.light-service.findx
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -472,4 +472,4 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/zte/akershus/akershus-vendor.mk)
+$(call inherit-product, vendor/oppo/findx/findx-vendor.mk)

@@ -16,7 +16,7 @@ on boot
 	chmod 0664 /sys/class/leds/red/pwm_us
 	chmod 0664 /sys/class/leds/green/pwm_us
 
-service vendor.light-default /vendor/bin/hw/android.hardware.light-service.akershus
+service vendor.light-default /vendor/bin/hw/android.hardware.light-service.findx
     class hal
     user system
     group system
