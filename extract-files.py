@@ -76,6 +76,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libgui_shim.so'),
     'vendor/etc/sensors/hals.conf': blob_fixup()
         .regex_replace('oplus.sensors.ssc.so', ''),
+    'vendor/lib64/libvidhance.so': blob_fixup()
+        .add_needed('libcomparetf2_shim.so'),
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
 }  # fmt: skip
