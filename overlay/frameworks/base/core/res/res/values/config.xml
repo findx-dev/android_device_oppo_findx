@@ -26,56 +26,18 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <!-- Array of desired screen brightness in nits corresponding to the lux values
-         in the config_autoBrightnessLevels array. The display brightness is defined as the measured
-         brightness of an all-white image.
-         If this is defined then:
-            - config_autoBrightnessLcdBacklightValues should not be defined
-            - config_screenBrightnessNits must be defined
-            - config_screenBrightnessBacklight must be defined
-         This array should have size one greater than the size of the config_autoBrightnessLevels
-         array. The brightness values must be non-negative and non-decreasing. This must be
-         overridden in platform specific overlays -->
-    <array name="config_autoBrightnessDisplayValuesNits">
-        <item>1.63</item>
-        <item>3.47</item>
-        <item>5.21</item>
-        <item>34.77</item>
-        <item>34.77</item>
-        <item>34.77</item>
-        <item>34.77</item>
-        <item>53.89</item>
-        <item>67.8</item>
-        <item>74.76</item>
-        <item>74.76</item>
-        <item>76.5</item>
-        <item>78.24</item>
-        <item>83.45</item>
-        <item>95.62</item>
-        <item>104.32</item>
-        <item>109.53</item>
-        <item>116.49</item>
-        <item>146.05</item>
-        <item>161.69</item>
-        <item>182.56</item>
-        <item>347.74</item>
-        <item>417.28</item>
-        <item>445</item>
-    </array>
-
     <!-- Array of output values for LCD backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>5</item>
-        <item>60</item>
-        <item>80</item>
-        <item>105</item>
-        <item>135</item>
-        <item>155</item>
-        <item>175</item>
-        <item>225</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>70</item>
+        <item>110</item>
+        <item>160</item>
+        <item>200</item>
         <item>255</item>
     </integer-array>
 
@@ -88,14 +50,13 @@
          Zone N + 1     array[N] <= LUX < infinity
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>50</item>
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>100</item>
         <item>150</item>
-        <item>220</item>
-        <item>620</item>
-        <item>1000</item>
-        <item>2000</item>
-        <item>3500</item>
-        <item>4000</item>
+        <item>210</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
@@ -119,7 +80,7 @@
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMinimum">4</integer>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
@@ -369,26 +330,12 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-    <!-- The bounding path of the cutout region of the main built-in display.
-         Must either be empty if there is no cutout region, or a string that is parsable by
-         {@link android.util.PathParser}.
+    <!-- Default radius of the software rounded corners -->
+    <dimen name="rounded_corner_radius">100px</dimen>
 
-         The path is assumed to be specified in display coordinates with pixel units and in
-         the display's native orientation, with the origin of the coordinate system at the
-         center top of the display.
-
-         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
-         appended after the path string to interpret coordinates in dp instead of px units.
-         Note that a physical cutout should be configured in pixels for the best results.
-
-         Example for a 10px x 10px square top-center cutout:
-                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
-         Example for a 10dp x 10dp square top-center cutout:
-                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
-
-         @see https://www.w3.org/TR/SVG/paths.html#PathData
-         -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -290,0 L -290,88 L 290,88 L 290,0 Z</string>
+    <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
+         calculate the status bar height. -->
+    <dimen name="status_bar_height_default">32dp</dimen>
 
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
