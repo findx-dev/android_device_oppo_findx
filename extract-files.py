@@ -74,24 +74,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libnativehelper_shim.so'),
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so'),
-    'vendor/lib/libZEffectLib.so': blob_fixup()
-        .add_needed('libui_shim.so'),
-    ('vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service', 'vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so', 'vendor/lib64/com.fingerprints.extension@1.0.so'): blob_fixup()
-        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace('oplus.sensors.ssc.so', ''),
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
-    ('vendor/lib/libtsvideoprocess.so', 'libswregistrationalgo'): blob_fixup()
-        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
-    'vendor/lib/libFNVfbEngineHAL.so': blob_fixup()
-        .clear_symbol_version('AHardwareBuffer_allocate')
-        .clear_symbol_version('AHardwareBuffer_describe')
-        .clear_symbol_version('AHardwareBuffer_lock')
-        .clear_symbol_version('AHardwareBuffer_release')
-        .clear_symbol_version('AHardwareBuffer_unlock'),
-    'vendor/lib/libmmcamera_faceproc.so': blob_fixup()
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
