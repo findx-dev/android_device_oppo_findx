@@ -58,6 +58,10 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
 
+# OEM NV backup
+ro.build.version.ota=PAFM00_11.H.15_4150_202112132055
+ro.sys.reserve.integrate=true
+
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 

@@ -178,6 +178,9 @@ ro.netflix.bsp_rev=Q845-14477-1
 # Network manager
 persist.vendor.data.iwlan.enable=true
 
+# OEM NV backup
+ro.vendor.oplus.radio.cn_nvbk=TRUE
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 

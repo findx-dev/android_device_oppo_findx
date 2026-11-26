@@ -44,6 +44,9 @@ on early-init
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
 
+    # Needed by rmt_storage to bind the OEM NV backup
+    chmod 0444 /sys/devices/soc0/serial_number
+
 on init
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system

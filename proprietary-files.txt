@@ -654,6 +654,9 @@ vendor/lib/libqmi_encdec.so|42f1d3da38170a5a69edaeb459db8425f455c625
 vendor/lib/libqmi.so|1003a02d1f20a388f19d3a62a924b6a0cb297852
 vendor/lib/libqmiservices.so|4b8aece94c02b56474b6044e4bdef749a4d91822
 
+# Remote storage
+vendor/bin/rmt_storage
+
 # RIL - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|5d0fe3593ef98ebd307d50e0c1a3b4857b607935
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
@@ -671,7 +674,6 @@ vendor/bin/qrtr-cfg|9786455690d4b8e60681f40ebe61fc937d2cd713
 vendor/bin/qrtr-lookup|6342b6b636327c53258d0d54c9dd93e34a3da3f7
 vendor/bin/qrtr-ns|09cff0de46c5d4eb1cd7dfa5b5bdda015e9d7a75
 vendor/bin/qti|2b49b2b7772f77eec93ca72101e1800cbbccde94
-vendor/bin/rmt_storage|0692e204f61599c6972c72a51ba89226413047b2
 vendor/bin/ssgqmigd|5769f2aef8fdf48f55b01e3d7d3d1aecb860d7e1
 vendor/bin/ssgtzd|b54ecee6dc4738b778d4c4cd7d1a6b768b706392
 vendor/bin/tftp_server|e37e449d8c842353cfae9f30756863f54c567e08

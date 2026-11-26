@@ -1,0 +1,6 @@
+allow rmt_storage proc_oppoversion:dir r_dir_perms;
+allow rmt_storage proc_oppoversion:file r_file_perms;
+allow rmt_storage sysfs_socinfo_sensitive:file r_file_perms;
+allow rmt_storage sysfs_uio_file:file r_file_perms;
+
+dontaudit rmt_storage { system_prop default_prop }:file { read open getattr };

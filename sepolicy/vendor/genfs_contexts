@@ -7,3 +7,7 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state          u
 genfscon sysfs /devices/platform/soc/a88000.i2c/i2c-0/0-0061/power_supply/wireless/type u:object_r:sysfs_wireless_supply:s0
 
 genfscon sysfs /devices/platform/vendor/vendor:extcon_usb                      u:object_r:sysfs_extcon:s0
+
+genfscon proc /oppoVersion                             u:object_r:proc_oppoversion:s0
+
+genfscon sysfs /devices/platform/soc/0.qcom,oembackup_sharedmem/uio            u:object_r:sysfs_uio_file:s0
