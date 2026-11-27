@@ -17,6 +17,9 @@ allow hal_camera_default camera_eeprom_device:chr_file { open read write ioctl }
 
 allow hal_camera_default proc_flash_light_file:file { open read write getattr };
 
+allow hal_camera_default sysfs_motor:dir search;
+allow hal_camera_default sysfs_motor:file r_file_perms;
+
 hal_client_domain(hal_camera_default, hal_graphics_allocator)
 
 r_dir_file(hal_camera_default, persist_camera_file)
