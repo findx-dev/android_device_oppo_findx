@@ -26,3 +26,6 @@ type sysfs_wireless_supply, sysfs_type, fs_type;
 
 # OPPO version info
 type proc_oppoversion, fs_type, proc_type;
+
+# Camera motor
+type sysfs_motor, sysfs_type, fs_type;

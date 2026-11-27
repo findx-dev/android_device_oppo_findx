@@ -153,6 +153,11 @@ PRODUCT_PACKAGES += \
     libui_shim.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
+# Camera motor
+PRODUCT_PACKAGES += \
+    FindXCameraHelper \
+    vendor.oplus.hardware.motor-service.findx
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \

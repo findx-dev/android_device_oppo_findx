@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="free_fall_detected_message">Free fall detected. The camera has been lowered to protect it.</string>
+    <string name="motor_cannot_go_down_message">The camera cannot retract, please make sure nothing is blocking it.</string>
+    <string name="motor_cannot_go_up_message">The camera cannot pop up, please make sure nothing is blocking it.</string>
+    <string name="motor_press_message">Pressing down the camera can damage the motor. Please avoid doing so.</string>
+</resources>
