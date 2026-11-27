@@ -347,11 +347,15 @@
     <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system_ext/priv-app/FindXCameraHelper/FindXCameraHelper.apk</item>
+        <item>/system_ext/priv-app/FindXKeyHandler/FindXKeyHandler.apk</item>
+        <item>/system_ext/priv-app/LineageParts/LineageParts.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.camerahelper.KeyHandler</item>
+        <item>org.lineageos.findx.keyhandler.KeyHandler</item>
+        <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
     </string-array>
 
 </resources>

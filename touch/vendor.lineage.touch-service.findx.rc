@@ -1,0 +1,18 @@
+on init
+    setprop vendor.touch.dt2w 0
+    setprop vendor.touch.gesture.enabled 0
+
+# The touchpanel has a single switch for tap to wake and gestures.
+on property:vendor.touch.dt2w=1
+    write /proc/touchpanel/double_tap_enable 1
+
+on property:vendor.touch.gesture.enabled=1
+    write /proc/touchpanel/double_tap_enable 1
+
+on property:vendor.touch.dt2w=0 && property:vendor.touch.gesture.enabled=0
+    write /proc/touchpanel/double_tap_enable 0
+
+service vendor.touch-hal /vendor/bin/hw/vendor.lineage.touch-service.findx
+    class hal
+    user system
+    group system

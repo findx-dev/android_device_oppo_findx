@@ -1,2 +1,5 @@
 allow system_server sysfs_battery_supply:dir search;
 allow system_server sysfs_battery_supply:file { getattr open read };
+
+# FindXKeyHandler reads the screen off gesture type
+allow system_server proc_touchpanel_coordinate:file r_file_perms;

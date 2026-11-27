@@ -1,0 +1,32 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "vendor.lineage.touch-service.findx",
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["vendor.lineage.touch-service.findx.rc"],
+    vintf_fragments: ["vendor.lineage.touch-service.findx.xml"],
+    srcs: ["service.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "vendor.lineage.touch-V1-ndk",
+    ],
+}
+
+android_app {
+    name: "FindXKeyHandler",
+    srcs: ["keyhandler/src/**/*.kt"],
+    manifest: "keyhandler/AndroidManifest.xml",
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    optimize: {
+        proguard_flags_files: ["keyhandler/proguard.flags"],
+    },
+}

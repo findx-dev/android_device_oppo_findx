@@ -34,3 +34,6 @@ persist.sensor.sardisable  u:object_r:sensors_prop:s0
 # Thermal
 persist.sys.thermal.       u:object_r:thermal_engine_prop:s0
 sys.thermal.               u:object_r:thermal_engine_prop:s0
+
+# Touchscreen gestures
+vendor.touch.              u:object_r:vendor_touch_prop:s0

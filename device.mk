@@ -380,6 +380,11 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml
 
+# Touch
+PRODUCT_PACKAGES += \
+    FindXKeyHandler \
+    vendor.lineage.touch-service.findx
+
 # Treble
 PRODUCT_USE_VNDK_OVERRIDE := true
 

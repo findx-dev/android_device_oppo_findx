@@ -20,6 +20,7 @@ type sysfs_proximity_sensor, sysfs_type, fs_type;
 
 # Touchpanel
 type sysfs_touchpanel, fs_type, sysfs_type;
+type proc_touchpanel_coordinate, fs_type, proc_type;
 
 # Wirless Charger
 type sysfs_wireless_supply, sysfs_type, fs_type;

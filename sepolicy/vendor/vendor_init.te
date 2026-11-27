@@ -8,3 +8,7 @@ set_prop(vendor_init, vendor_bluetooth_prop)
 set_prop(vendor_init, vendor_camera_prop)
 allow vendor_init proc_watermark_scale_factor:file w_file_perms;
 allow vendor_init proc_watermark_boost_factor:file w_file_perms;
+
+# Touchscreen gestures and tap to wake
+set_prop(vendor_init, vendor_touch_prop)
+allow vendor_init sysfs_touchpanel:file w_file_perms;

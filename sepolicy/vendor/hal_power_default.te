@@ -9,5 +9,5 @@ allow hal_power_default device_latency:chr_file rw_file_perms;
 
 allow hal_power_default proc:file { open };
 
-allow hal_power_default sysfs_touchpanel:dir search;
-allow hal_power_default sysfs_touchpanel:{ file lnk_file } rw_file_perms;
+# Tap to wake is applied by init through vendor.touch.dt2w
+set_prop(hal_power_default, vendor_touch_prop)

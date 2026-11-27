@@ -211,11 +211,12 @@
     },
 	{
       "Name": "DoubleTapToWakeEnable",
-      "Path": "/proc/touchscreen/wake_gesture",
+      "Path": "vendor.touch.dt2w",
       "Values": [
         "1",
         "0"
       ],
+      "Type": "Property"
     },
     {
       "Name": "PMQoSCpuDmaLatency",
