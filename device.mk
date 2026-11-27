@@ -275,6 +275,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.findx \
     vendor.lineage.livedisplay-service.sdm
 
 $(call soong_config_set,livedisplay_sdm,enable_pa,false)

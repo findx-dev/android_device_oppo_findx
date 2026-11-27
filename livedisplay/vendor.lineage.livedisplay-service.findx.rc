@@ -1,0 +1,4 @@
+service vendor.livedisplay-findx /vendor/bin/hw/vendor.lineage.livedisplay-service.findx
+    class hal
+    user system
+    group system
