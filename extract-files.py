@@ -80,6 +80,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcomparetf2_shim.so'),
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/lib64/sensors.ssc.so': blob_fixup()
+        .binary_regex_replace(b'qti.sensor.proximity_fake', b'android.sensor.proximity\x00')
+        .binary_regex_replace(b'\xA9\xC7\x84\x52\x49\\?\xA0\x72', b'\x09\x01\x80\x52\x1F\x20\x03\xD5'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
